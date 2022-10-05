@@ -107,10 +107,6 @@ body {
 }
 
 .hero-pre-title {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: var(--typical-lh);
-  text-transform: uppercase;
   color: rgba(157, 164, 189, 0.6);
 }
 
@@ -164,10 +160,6 @@ body {
   background-color: #303030;
 }
 .prices-pre-title {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  text-transform: uppercase;
   color: rgba(157, 164, 189, 0.6);
 }
 .prices-title {
@@ -213,11 +205,6 @@ body {
   color: #303030;
 }
 .benefits-pre-title {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  text-transform: uppercase;
-
   color: #303030;
 }
 .benefits-title {
