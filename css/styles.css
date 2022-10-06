@@ -91,12 +91,17 @@ body {
 }
 
 .btn {
+  min-width: 160px;
+  height: 40px;
   font-family: inherit;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+  background-color: transparent;
 }
 
 .pre-title {
@@ -117,6 +122,30 @@ body {
   background-color: gray;
   padding-top: 32px;
   padding-bottom: 32px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+
+.header-connect {
+  margin-left: auto;
+}
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  margin-right: 131px;
+}
+
+.header-list {
+  display: flex;
+  gap: 30px;
 }
 
 .header-link,
@@ -145,12 +174,20 @@ body {
 
 .header-btn {
   color: var(--main-btn-color);
+  margin-left: 30px;
 }
 
 /* ---------------------HERO--------------------- */
 
 .hero {
-  background-color: #898b8f;
+}
+
+.hero-container {
+  display: flex;
+}
+
+.hero-list {
+  width: 100px;
 }
 
 .hero-link {
@@ -163,6 +200,8 @@ body {
 
 .hero-wrap {
   padding: 272px 100px 208px;
+  background-color: #898b8f;
+  flex-grow: 1;
 }
 
 .hero-pre-title {
@@ -189,9 +228,21 @@ body {
 
 /* ---------------------ABOUT--------------------- */
 
+.about-container {
+  display: flex;
+  gap: 30px;
+}
+
 .about-list {
+  display: flex;
+  gap: 30px;
+  width: calc((100% - 30px) / 2);
 }
 .about-item {
+}
+
+.about-wrap {
+  max-width: 470px;
 }
 .about-pre-title {
   color: #303030;
@@ -231,12 +282,24 @@ body {
   color: var(--main-title-color);
   margin-bottom: 44px;
 }
+
+.prices-wrap {
+  display: flex;
+  justify-content: space-between;
+}
 .prices-list {
   border: 1px solid #ffffff;
   padding: 30px 20px;
+  width: calc((100% - 30px) / 2);
 }
 
 .prices-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.prices-item + .prices-item {
+  margin-top: 20px;
 }
 
 .prices-item-text {
@@ -257,12 +320,37 @@ body {
 .benefits {
 }
 
+.benefits-container {
+  display: flex;
+  padding-left: 100px;
+}
+
+.benefits-list {
+  display: flex;
+  width: 370px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  margin-right: 130px;
+}
+
 .benefits-item {
   width: 170px;
   height: 133px;
   border: 1px solid #000000;
   padding: 20px 24px;
   text-align: center;
+}
+
+.benefits-item:nth-child(odd) {
+  margin-right: 30px;
+}
+.benefits-item:nth-child(even) {
+  margin-top: 30px;
+}
+
+.benefits-wrap {
+  max-width: 500px;
+  padding-top: 9px;
 }
 
 .benefits-item span {
@@ -310,9 +398,12 @@ body {
 }
 
 .barbers-list {
+  display: flex;
+  gap: 30px;
 }
 
 .barbers-item {
+  width: calc((100% - 60px) / 3);
 }
 .barbers-item-title {
   font-weight: 400;
@@ -321,6 +412,8 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: #303030;
+  margin-top: 30px;
+  margin-bottom: 8px;
 }
 .barbers-item-text {
   font-size: 14px;
@@ -337,15 +430,36 @@ body {
   margin-bottom: 44px;
 }
 
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  /* column-gap: 30px;
+  row-gap: 50px; */
+  /* margin: -15px; */
+}
+
+.gallery-item {
+  width: calc((100% - 90px) / 4);
+  /* width: calc(100% / 4 - 30px);
+  margin: 15px; */
+}
+
 .contacts-wrap {
   background-color: #000000;
+}
+
+.contacts-wrap > .container {
+  display: flex;
+  justify-content: space-between;
 }
 /* ---------------------ONLINE--------------------- */
 
 .online {
   padding-top: 130px;
   padding-bottom: 183px;
-  background-color: #555555;
+
+  width: calc((100% - 30px) / 2);
 }
 
 .online-title {
@@ -354,8 +468,9 @@ body {
 /* ---------------------cONTACTS--------------------- */
 
 .contacts {
-  background-color: #303030;
   padding-top: 130px;
+  width: calc((100% - 30px) / 2);
+  padding-left: 100px;
 }
 
 .contacts-title {
@@ -413,6 +528,12 @@ body {
   padding-bottom: 56px;
 }
 
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .footer-copy {
   font-weight: 600;
   font-size: 11px;
@@ -421,6 +542,8 @@ body {
   color: #9da4bd;
 }
 .footer-list {
+  display: flex;
+  gap: 40px;
 }
 
 .footer-item {
