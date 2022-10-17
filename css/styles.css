@@ -80,7 +80,6 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 2px solid red;
 }
 
 .section-title {
@@ -135,7 +134,8 @@ body {
 /* ---------------------HEADER--------------------- */
 
 .header {
-  background-color: gray;
+  position: absolute;
+  width: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -202,8 +202,27 @@ body {
   display: flex;
 }
 
-.hero-list {
+.hero-soc {
   width: 100px;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 27px;
+  padding-bottom: 40px;
+}
+
+.hero-list {
+  display: flex;
+  align-items: center;
+  transform: rotate(-90deg) translateY(100%);
+  transform-origin: bottom left;
+  gap: 40px;
+}
+
+.hero-list::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
 }
 
 .hero-link {
@@ -315,7 +334,13 @@ body {
 /* ---------------------PRICES--------------------- */
 
 .prices {
-  background-color: #303030;
+  background-color: #111319;
+  background-image: url(../img/prices-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 .prices-pre-title {
   color: rgba(157, 164, 189, 0.6);
@@ -331,9 +356,24 @@ body {
   justify-content: space-between;
 }
 .prices-list {
-  border: 1px solid #ffffff;
   padding: 30px 20px;
   width: calc((100% - 30px) / 2);
+}
+
+.prices-list:first-child {
+  background-image: linear-gradient(
+    180deg,
+    #171a24 0%,
+    rgba(23, 26, 36, 0.2) 100%
+  );
+}
+
+.prices-list:last-child {
+  background-image: linear-gradient(
+    180deg,
+    #090b13 0%,
+    rgba(9, 11, 19, 0.2) 100%
+  );
 }
 
 .prices-item {
@@ -392,9 +432,9 @@ body {
 .benefits-item {
   width: 170px;
   height: 133px;
-  border: 1px solid #000000;
   padding: 20px 24px;
   text-align: center;
+  background: #f7f7f7;
 }
 
 .benefits-item:nth-child(odd) {
@@ -418,6 +458,20 @@ body {
   color: #303030;
   margin-bottom: 6px;
   display: inline-block;
+  position: relative;
+}
+
+.benefits-item span::after {
+  content: '+';
+  top: 7px;
+  position: absolute;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: calc(22 / 16);
+  text-align: center;
+  left: calc(100% + 1px);
+
+  color: #ff6c00;
 }
 .benefits-item-text {
   font-weight: 600;
@@ -442,6 +496,10 @@ body {
 }
 
 /* ---------------------BARBRS--------------------- */
+
+.barbers {
+  background-color: #f7f7f7;
+}
 
 .barbers-pre-title {
   color: #303030;
@@ -593,7 +651,13 @@ body {
 }
 
 .contacts-wrap {
-  background-color: #000000;
+  background-color: #191c26;
+  background-image: url(../img/contacts-bg.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: calc((100% - 30px) / 2) 100%;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .contacts-wrap > .container {
@@ -710,6 +774,7 @@ body {
   position: fixed;
   top: 0;
   background-color: rgba(48, 48, 48, 0.534);
+  transition: opacity 300ms linear, visibility 300ms linear;
 }
 
 .modal {
@@ -720,7 +785,12 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scaleY(1) rotate(0);
+  transition: transform 300ms linear;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scaleY(0) rotate(-180deg);
 }
 
 .modal-close {
@@ -738,4 +808,8 @@ body {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
