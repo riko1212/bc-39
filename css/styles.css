@@ -787,6 +787,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%) scaleY(1) rotate(0);
   transition: transform 300ms linear;
+  padding: 40px;
 }
 
 .backdrop.is-hidden .modal {
@@ -813,3 +814,169 @@ body {
 .no-scroll {
   overflow: hidden;
 }
+
+.modal-title {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 15px;
+}
+/* --------------------input + icon                 -       ---- */
+
+.modal-field,
+.modal-label {
+  display: block;
+  margin-bottom: 20px;
+}
+.modal-input-wrap {
+  position: relative;
+}
+
+.modal-input {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #999999;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #111319;
+  padding-left: 25px;
+}
+
+.modal-input:focus {
+  outline-color: var(--accent-color);
+}
+
+.modal-input:focus + .modal-input-icon {
+  fill: var(--accent-color);
+}
+
+.modal-input-icon {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* --------------------------------------- ---- */
+
+.modal-input::placeholder,
+.modal-textarea::placeholder {
+  font-size: 14px;
+  color: #9da4bd;
+}
+
+.error {
+  display: none;
+}
+
+.modal-input:not(:placeholder-shown):not(:focus):valid {
+  background-color: rgba(0, 128, 0, 0.217);
+}
+
+.modal-input:not(:placeholder-shown):not(:focus):invalid {
+  background-color: rgba(128, 60, 0, 0.217);
+}
+
+.modal-input:not(:placeholder-shown):not(:focus):invalid + .error {
+  display: block;
+}
+
+.modal-label-text {
+  font-size: 12px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.modal-textarea {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #999999;
+  border-radius: 5px;
+  resize: none;
+  padding: 10px;
+}
+
+.check-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #999999;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+/* .check-text::before {
+  content: '';
+  width: 40px;
+  height: 22px;
+  border: 1px solid rgba(157, 164, 189, 0.6);
+  border-radius: 50px;
+  margin-right: 10px;
+  background-color: rgba(157, 164, 189, 0.2);
+  transition: background-color 250ms linear;
+}
+
+.check-text::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: #9da4bd;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 250ms linear, background-color 250ms linear;
+}
+
+.input-check:checked + .check-text::after {
+  transform: translate(18px);
+  background-color: rgb(158, 210, 158);
+}
+
+.input-check:checked + .check-text::before {
+  background-color: rgb(255, 255, 255);
+} */
+
+/* ------------------------sprite ------------------------*/
+
+.check-text span {
+  width: 16px;
+  height: 15px;
+  border: 2px solid #303030;
+  display: block;
+  border-radius: 2px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+}
+
+.input-check:focus + .check-text span {
+  border-color: var(--accent-color);
+}
+
+.input-check:checked + .check-text span {
+  background-color: var(--accent-color);
+  border-color: transparent;
+  fill: #ffffff;
+}
+
+/* ------------------------before ------------------------*/
+
+/* .check-text::before {
+  content: '';
+  width: 16px;
+  height: 15px;
+  border: 2px solid #303030;
+  display: block;
+  border-radius: 2px;
+  margin-right: 5px;
+}
+.input-check:checked + .check-text::before {
+  background-color: var(--accent-color);
+  border-color: transparent;
+  background-image: url(../img/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+} */
