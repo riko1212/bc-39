@@ -1,0 +1,13 @@
+.contacts-wrap {
+  background-color: #191c26;
+  background-image: url(../img/contacts-bg.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: calc((100% - 30px) / 2) 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  > .container {
+    display: flex;
+    justify-content: space-between;
+  }
+}

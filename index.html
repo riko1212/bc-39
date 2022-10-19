@@ -23,36 +23,40 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <header class="header">
-      <div class="container header-container">
-        <nav class="header-navigation">
-          <a class="header-logo" href=""
+      <div class="container header__container">
+        <nav class="navigation">
+          <a class="logo header__logo" href=""
             ><img src="./img/logo.svg" alt="site logo"
           /></a>
 
-          <ul class="header-list list">
-            <li class="header-item">
-              <a class="header-link link" href="">About</a>
+          <ul class="menu list">
+            <li class="menu__item">
+              <a class="menu__link link" href="">About</a>
             </li>
-            <li class="header-item">
-              <a class="header-link link" href="">Services and prices</a>
+            <li class="menu__item">
+              <a class="menu__link link" href="">Services and prices</a>
             </li>
-            <li class="header-item">
-              <a class="header-link link" href="">Barbers</a>
+            <li class="menu__item">
+              <a class="menu__link link" href="">Barbers</a>
             </li>
-            <li class="header-item">
-              <a class="header-link link" href="">Contacts</a>
+            <li class="menu__item">
+              <a class="menu__link link" href="">Contacts</a>
             </li>
           </ul>
         </nav>
-        <div class="header-connect">
-          <a class="header-tel link" href="tel:+380441111111"
+        <div class="connect header__connect">
+          <a class="connect__tel link" href="tel:+380441111111"
             >+38 044 111 11 11</a
           >
-          <button class="header-btn btn" data-modal-open type="button">
+          <button
+            class="connect__btn btn btn--light"
+            data-modal-open
+            type="button"
+          >
             Online-booking
           </button>
         </div>
@@ -60,21 +64,21 @@
     </header>
     <main>
       <section class="hero">
-        <div class="container hero-container">
-          <div class="hero-soc">
-            <ul class="hero-list list">
-              <li class="hero-item">
+        <div class="container hero__container">
+          <div class="soc">
+            <ul class="soc__list list">
+              <li class="soc__item">
                 <a
-                  class="hero-link link"
+                  class="soc__link link"
                   href=""
                   target="_blank"
                   rel="noopener noreferrer nofollow"
                   >Instagram</a
                 >
               </li>
-              <li class="hero-item">
+              <li class="soc__item">
                 <a
-                  class="hero-link link"
+                  class="soc__link link"
                   href=""
                   target="_blank"
                   rel="noopener noreferrer nofollow"
@@ -84,12 +88,14 @@
             </ul>
           </div>
 
-          <div class="hero-wrap">
-            <p class="hero-pre-title pre-title">A hair salon for men in Kyiv</p>
-            <h1 class="hero-title animate__animated animate__wobble">
+          <div class="hero__wrap">
+            <p class="hero__pre-title pre-title">
+              A hair salon for men in Kyiv
+            </p>
+            <h1 class="hero__title animate__animated animate__wobble">
               BarberShop
             </h1>
-            <p class="hero-after-title">
+            <p class="hero__after-title">
               We are experts in trendy men’s haircuts. We work quickly,
               carefully and with style.
             </p>
@@ -97,32 +103,32 @@
         </div>
       </section>
       <section class="about section">
-        <div class="container about-container">
-          <ul class="about-list list">
-            <li class="about-item">
+        <div class="container about__container">
+          <ul class="pic-list list">
+            <li class="pic-list__item">
               <img src="./img/about-img-1.jpeg" alt="haircut" width="270" />
             </li>
-            <li class="about-item">
+            <li class="pic-list__item">
               <img src="./img/about-img-2.jpeg" alt="haircut" width="270" />
             </li>
           </ul>
-          <div class="about-wrap">
-            <p class="about-pre-title pre-title">About</p>
-            <h2 class="about-title section-title" data-aos="fade-left">
+          <div class="about__wrap">
+            <p class="about__pre-title pre-title">About</p>
+            <h2 class="about__title section-title" data-aos="fade-left">
               Best Barbershop in your city
             </h2>
-            <p class="about-after-title">
+            <p class="about__after-title">
               If you want to add more confidence to your image, you should
               definitely visit us.
             </p>
-            <p class="about-text">
+            <p class="about__text">
               We are a team that never stops at what has been achieved and are
               thirsty for changes. And when you fall into the hands of our
               master, you will never be the same again. We are a team that is
               always "on the same wave" with clients. Therefore, we are always
               ready to improve everyone who comes to us!
             </p>
-            <button class="about-btn btn" type="button">Online-booking</button>
+            <button class="btn--dark btn" type="button">Online-booking</button>
           </div>
         </div>
       </section>
@@ -210,15 +216,15 @@
       </section>
       <section class="barbers section">
         <div class="container">
-          <p class="barbers-pre-title pre-title">
+          <p class="barbers__pre-title pre-title">
             For true enjoyers of the atmosphere
           </p>
-          <h2 class="barbers-title section-title">Our barbers</h2>
-          <ul class="barbers-list list">
-            <li class="barbers-item">
-              <div class="barbers-top-wrap">
+          <h2 class="barbers__title section-title">Our barbers</h2>
+          <ul class="card-list list">
+            <li class="card-list__item">
+              <div class="card-list__top-wrap">
                 <img src="./img/barbers-img-1.jpeg" alt="haircut" width="370" />
-                <p class="barbers-top-text">
+                <p class="card-list__top-text">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed
                   sunt similique aspernatur reiciendis nobis pariatur, officia
                   voluptatibus maiores eum quis consequuntur harum labore
@@ -227,36 +233,48 @@
                 </p>
               </div>
 
-              <h3 class="barbers-item-title">John Smith</h3>
-              <p class="barbers-item-text">Extreme Barber</p>
-              <ul class="barbers-soc-list list">
-                <li class="barbers-soc-item">
-                  <a href="" class="barbers-soc-link link">
-                    <svg class="barbers-soc-icon" width="20" height="20">
+              <h3 class="card-list__item-title">John Smith</h3>
+              <p class="card-list__item-text">Extreme Barber</p>
+              <ul class="socials list">
+                <li class="socials__item">
+                  <a href="" class="socials__link socials__link--barbers link">
+                    <svg class="socials__icon" width="20" height="20">
                       <use href="./img/symbol-defs.svg#icon-instagram"></use>
                     </svg>
                   </a>
                 </li>
-                <li class="barbers-soc-item">
-                  <a href="" class="barbers-soc-link link"></a>
+                <li class="socials__item">
+                  <a href="" class="socials__link socials__link--barbers link">
+                    <svg class="socials__icon" width="20" height="20">
+                      <use href="./img/symbol-defs.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
                 </li>
-                <li class="barbers-soc-item">
-                  <a href="" class="barbers-soc-link link"></a>
+                <li class="socials__item">
+                  <a href="" class="socials__link socials__link--barbers link">
+                    <svg class="socials__icon" width="20" height="20">
+                      <use href="./img/symbol-defs.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
                 </li>
-                <li class="barbers-soc-item">
-                  <a href="" class="barbers-soc-link link"></a>
+                <li class="socials__item">
+                  <a href="" class="socials__link socials__link--barbers link">
+                    <svg class="socials__icon" width="20" height="20">
+                      <use href="./img/symbol-defs.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
                 </li>
               </ul>
             </li>
-            <li class="barbers-item">
+            <li class="card-list__item">
               <img src="./img/barbers-img-2.jpeg" alt="haircut" width="370" />
-              <h3 class="barbers-item-title">Michele Doe</h3>
-              <p class="barbers-item-text">Extreme Barber</p>
+              <h3 class="card-list__title">Michele Doe</h3>
+              <p class="card-list__text">Extreme Barber</p>
             </li>
-            <li class="barbers-item">
+            <li class="card-list__item">
               <img src="./img/barbers-img-3.jpeg" alt="haircut" width="370" />
-              <h3 class="barbers-item-title">Alan Black</h3>
-              <p class="barbers-item-text">Extreme Barber</p>
+              <h3 class="card-list__title">Alan Black</h3>
+              <p class="card-list__text">Extreme Barber</p>
             </li>
           </ul>
         </div>
@@ -344,6 +362,36 @@
             </address>
             <p class="contacts-subtitle">Working hours</p>
             <p class="contacts-schedule">Every day from 9:00 to 22:00</p>
+            <ul class="socials list">
+              <li class="socials__item">
+                <a href="" class="socials__link socials__link--contacts link">
+                  <svg class="socials__icon" width="20" height="20">
+                    <use href="./img/symbol-defs.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a href="" class="socials__link socials__link--contacts link">
+                  <svg class="socials__icon" width="20" height="20">
+                    <use href="./img/symbol-defs.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a href="" class="socials__link socials__link--contacts link">
+                  <svg class="socials__icon" width="20" height="20">
+                    <use href="./img/symbol-defs.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__item">
+                <a href="" class="socials__link socials__link--contacts link">
+                  <svg class="socials__icon" width="20" height="20">
+                    <use href="./img/symbol-defs.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
           </section>
         </div>
       </div>
@@ -373,7 +421,7 @@
         </ul>
       </div>
     </footer>
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close" data-modal-close>X</button>
         <p class="modal-title" title="заголовок">Заголовок модального вікна</p>

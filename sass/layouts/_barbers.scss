@@ -1,0 +1,131 @@
+.barbers {
+  background-color: #f7f7f7;
+}
+
+.barbers__pre-title {
+  color: #303030;
+  margin-bottom: var(--typical-margin);
+}
+
+.barbers__title {
+  color: var(--second-title-color);
+  margin-bottom: 44px;
+}
+
+.card-list {
+  display: flex;
+  gap: 30px;
+}
+
+.card-list__item {
+  width: calc((100% - 60px) / 3);
+}
+
+.card-list__top-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-list__top-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ffffff;
+  background-color: #ff6a0081;
+  line-height: 1.6;
+  font-weight: 600;
+  padding: 40px;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 300ms linear;
+  .card-list__item:hover & {
+    transform: translateY(0%);
+  }
+}
+.card-list__item-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(25 / 18);
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #303030;
+  margin-top: 30px;
+  margin-bottom: 8px;
+}
+.card-list__item-text {
+  font-size: 14px;
+  line-height: calc(19 / 14);
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+  margin-bottom: 30px;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.socials__item {
+  width: 44px;
+  height: 44px;
+}
+.socials__link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: aqua;
+    color: rgb(70, 11, 247);
+  }
+}
+
+.socials__link--barbers {
+  background-color: #ff6c00;
+  color: aqua;
+}
+
+.socials__icon {
+  fill: currentColor;
+}
+
+/* .barbers-soc-link:hover,
+.barbers-soc-link:focus {
+  background-color: aqua;
+}
+
+.barbers-soc-link:hover .barbers-soc-icon,
+.barbers-soc-link:focus .barbers-soc-icon {
+  fill: rgb(70, 11, 247);
+} */
+
+.test-list {
+  display: flex;
+  gap: 30px;
+}
+
+.test-item {
+  width: calc((100% - 150px) / 6);
+  height: 92px;
+}
+
+.test-link {
+  height: 100%;
+  border: 1px solid #555555;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    border-color: aqua;
+  }
+}
+
+.test-link:hover .test-icon {
+  fill: aqua;
+}
