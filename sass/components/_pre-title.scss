@@ -1,7 +1,5 @@
 .pre-title {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
+  @include font(11px, 1.36, 600, 0.1em);
   text-transform: uppercase;
   display: flex;
   align-items: center;

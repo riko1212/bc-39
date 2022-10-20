@@ -111,9 +111,10 @@ img {
 }
 
 .pre-title {
-  font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   display: flex;
   align-items: center;
@@ -715,8 +716,8 @@ img {
 .card-list__item-text {
   font-size: 14px;
   line-height: 1.3571428571;
-  text-align: center;
   letter-spacing: 0.02em;
+  text-align: center;
   color: var(--accent-color);
   margin-bottom: 30px;
 }
