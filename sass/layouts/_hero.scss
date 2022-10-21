@@ -1,39 +1,59 @@
 .hero__container {
   display: flex;
+  padding: 0;
+  @include mobile {
+    width: 100%;
+  }
+  @include tablet {
+    width: 720px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @include tablet {
+    width: 1200px;
+  }
 }
 
 .soc {
-  width: 100px;
-  display: flex;
-  align-items: flex-end;
-  padding-left: 27px;
-  padding-bottom: 40px;
+  display: none;
+  @include tablet {
+    width: 100px;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 27px;
+    padding-bottom: 40px;
+  }
 }
 
 .soc__list {
-  display: flex;
-  align-items: center;
-  transform: rotate(-90deg) translateY(100%);
-  transform-origin: bottom left;
-  gap: 40px;
-  &::before {
-    content: '';
-    width: 60px;
-    height: 1px;
-    background-color: #303030;
+  @include tablet {
+    display: flex;
+    align-items: center;
+    transform: rotate(-90deg) translateY(100%);
+    transform-origin: bottom left;
+    gap: 40px;
+    &::before {
+      content: '';
+      width: 60px;
+      height: 1px;
+      background-color: #303030;
+    }
   }
 }
 
 .soc__link {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: var(--typical-lh);
-  letter-spacing: 0.2em;
-  color: #303030;
+  @include tablet {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: var(--typical-lh);
+    letter-spacing: 0.2em;
+    color: #303030;
+  }
 }
 
 .hero__wrap {
-  padding: 272px 100px 208px;
+  // padding: 272px 100px 208px;
+  padding: 208px 31px;
   background-color: #898b8f;
   flex-grow: 1;
   background-image: linear-gradient(
@@ -44,6 +64,12 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  @include tablet {
+    padding: 272px 100px 237px;
+  }
+  @include desktop {
+    padding: 272px 100px 208px;
+  }
 }
 
 .hero__pre-title {
@@ -53,8 +79,10 @@
 
 .hero__title {
   font-family: 'Raleway', sans-serif;
-  font-size: 72px;
-  line-height: 1.18;
+  // font-size: 72px;
+  // line-height: 1.18;
+  font-size: 40px;
+  line-height: 1.17;
   letter-spacing: 0.05em;
   color: var(--main-title-color);
   margin-bottom: 20px;
@@ -65,23 +93,35 @@
       color: aquamarine;
     }
   }
-  &::before {
-    content: '';
-    width: 40px;
-    height: 40px;
-    background-image: url(../img/barbers-img-2.jpeg);
-    background-size: cover;
+  @include mobile {
+    font-size: 48px;
   }
-  &::after {
-    content: '!';
-    color: rgb(154, 71, 255);
+  @include desktop {
+    font-size: 72px;
+    line-height: 1.18;
   }
+  // &::before {
+  //   content: '';
+  //   width: 40px;
+  //   height: 40px;
+  //   background-image: url(../img/barbers-img-2.jpeg);
+  //   background-size: cover;
+  // }
+  // &::after {
+  //   content: '!';
+  //   color: rgb(154, 71, 255);
+  // }
 }
 
 .hero__after-title {
-  font-size: 18px;
-  line-height: 1.67;
+  font-size: 16px;
+  line-height: 1.62;
   letter-spacing: 0.02em;
   color: #9da4bd;
-  max-width: 360px;
+  max-width: 336px;
+  @include tablet {
+    max-width: 360px;
+    font-size: 18px;
+    line-height: 1.67;
+  }
 }
