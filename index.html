@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header__container">
         <nav class="navigation">
           <a class="logo header__logo" href=""
@@ -60,8 +60,72 @@
             Online-booking
           </button>
         </div>
+        <button type="button" class="menu-open" data-menu-open>
+          <svg width="40" height="40">
+            <use href="./img/symbol-defs.svg#icon-box"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+      <div class="mob-menu is-hidden" data-menu>
+        <div class="container">
+          <div class="mob-menu-top">
+            <button type="button" class="menu-close" data-menu-close>
+              <svg width="40" height="40">
+                <use href="./img/symbol-defs.svg#icon-close"></use>
+              </svg>
+            </button>
+            <ul class="mob-menu__list list">
+              <li class="mob-menu__item">
+                <a class="mob-menu__link link" href="">About</a>
+              </li>
+              <li class="mob-menu__item">
+                <a class="mob-menu__link link" href="">Services and prices</a>
+              </li>
+              <li class="mob-menu__item">
+                <a class="mob-menu__link link" href="#barbers">Barbers</a>
+              </li>
+              <li class="mob-menu__item">
+                <a class="mob-menu__link link" href="">Contacts</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mob-menu-bottom">
+            <div class="mob-connect header__connect">
+              <a class="mob-connect__tel link" href="tel:+380441111111"
+                >+38 044 111 11 11</a
+              >
+              <button
+                class="mob-connect__btn btn btn--light"
+                data-modal-open
+                type="button"
+              >
+                Online-booking
+              </button>
+            </div>
+            <ul class="mob-soc list">
+              <li class="mob-soc__item">
+                <a
+                  class="mob-soc__link link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mob-soc__item">
+                <a
+                  class="mob-soc__link link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
     <main>
       <section class="hero">
         <div class="container hero__container">
@@ -214,7 +278,7 @@
           </div>
         </div>
       </section> -->
-      <section class="barbers section">
+      <section class="barbers section" id="barbers">
         <div class="container">
           <p class="barbers__pre-title pre-title">
             For true enjoyers of the atmosphere
@@ -349,16 +413,42 @@
           <h2 class="visually-hidden">Gallery</h2>
           <ul class="gallery-list list">
             <li class="gallery-item">
-              <img src="./img/gallery-img-1.jpeg" alt="haircut" width="270" />
+              <picture>
+                <source
+                  srcset="
+                    ./img/gallery-img-1.jpeg    1x,
+                    ./img/gallery-img-1-2x.jpeg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/gallery-img-1-tab.jpeg    1x,
+                    ./img/gallery-img-1-tab-2x.jpeg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./img/gallery-img-1-mob.jpeg    1x,
+                    ./img/gallery-img-1-mob-2x.jpeg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img src="./img/gallery-img-1.jpeg" alt="haircut" />
+              </picture>
+              <!-- <img
+                srcset="
+                  ./img/gallery-img-1.jpeg    1x,
+                  ./img/gallery-img-1-2x.jpeg 2x
+                "
+                src="./img/gallery-img-1.jpeg"
+                alt="haircut"
+                width="270"
+              /> -->
             </li>
             <li class="gallery-item">
               <img src="./img/gallery-img-2.jpeg" alt="haircut" width="270" />
-            </li>
-            <li class="gallery-item">
-              <img src="./img/gallery-img-3.jpeg" alt="haircut" width="270" />
-            </li>
-            <li class="gallery-item">
-              <img src="./img/gallery-img-4.jpeg" alt="haircut" width="270" />
             </li>
             <li class="gallery-item">
               <img src="./img/gallery-img-3.jpeg" alt="haircut" width="270" />
@@ -546,5 +636,6 @@
     </script>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
